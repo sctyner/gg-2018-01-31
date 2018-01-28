@@ -1,0 +1,24 @@
+---
+title: "Recreating Historical Graphics"
+subtitle: "with `ggplot2`"
+author: "Sam Tyner"
+date: "2018/31/01"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, echo = TRUE)
+```
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
