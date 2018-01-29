@@ -78,6 +78,7 @@ dat1 <- read_csv("dat/nhgis0001_ts_nominal_state.csv")
 glimpse(dat1)
 ```
 
+
 ---
 # Read & glimpse data (2)
 
@@ -98,7 +99,6 @@ glimpse(dat2)
 # Data cleaning (1)
 
 Gather the appropriate variables and rank states by population 
-
 ```{r cleandat}
 dat1 %>% gather(Census, Population, A00AA1790:A00AA2010) %>% 
   mutate(Census = as.integer(str_replace(Census,"A00AA", "")),
@@ -108,9 +108,9 @@ dat1 %>% gather(Census, Population, A00AA1790:A00AA2010) %>%
   filter(TotPop != 0) %>%
   arrange(Census, desc(TotPop)) %>% 
   mutate(rank = row_number()) -> dat1.2
-glimpse(dat1.2)
+head(dat1.2)
 ```
-<!-- weird behavior-->
+<!--UGH WHAT THE FUCK-->
 
 --- 
 # Data Cleaning (2)
